@@ -14,13 +14,11 @@ import java.util.List;
 @RestController
 @RequestMapping("products")
 @CrossOrigin
-public class ProductsController
-{
+public class ProductsController {
     private ProductDao productDao;
 
     @Autowired
-    public ProductsController(ProductDao productDao)
-    {
+    public ProductsController(ProductDao productDao) {
         this.productDao = productDao;
     }
 
@@ -44,8 +42,7 @@ public class ProductsController
 
     @GetMapping("{id}")
     @PreAuthorize("permitAll()")
-    public Product getById(@PathVariable int id )
-    {
+    public Product getById(@PathVariable int id ) {
         try
         {
             var product = productDao.getById(id);
@@ -63,8 +60,7 @@ public class ProductsController
 
     @PostMapping()
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public Product addProduct(@RequestBody Product product)
-    {
+    public Product addProduct(@RequestBody Product product) {
         try
         {
             return productDao.create(product);
@@ -77,8 +73,7 @@ public class ProductsController
 
     @PutMapping("{id}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public void updateProduct(@PathVariable int id, @RequestBody Product product)
-    {
+    public void updateProduct(@PathVariable int id, @RequestBody Product product) {
         try
         {
             productDao.create(product);
@@ -91,8 +86,7 @@ public class ProductsController
 
     @DeleteMapping("{id}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public void deleteProduct(@PathVariable int id)
-    {
+    public void deleteProduct(@PathVariable int id) {
         try
         {
             var product = productDao.getById(id);
