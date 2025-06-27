@@ -6,7 +6,7 @@
 
 ### 💼 Capstone Context
 
-This project was developed as part of the **Year Up Advanced Java Capstone**, assuming the role of a **Backend Developer** for an existing operational website. The focus was on enhancing an existing Spring Boot REST API backed by a MySQL database.
+This project was developed assuming the role of a **Backend Developer** for an existing operational website. The focus was on enhancing an existing Spring Boot REST API backed by a MySQL database.
 
 ---
 
