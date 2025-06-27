@@ -1,5 +1,8 @@
 # 🛒 EasyShop E-Commerce API – Capstone Project
 
+![Uploading 17684833-b540-4e8c-9efa-40cc31fc85a4.png…]()
+
+
 ## 📚 Project Overview
 
 **EasyShop** is an online e-commerce application designed to provide customers with a seamless online shopping experience. This project represents **Version 2** development for EasyShop, where enhancements, bug fixes, and new features were implemented to improve system functionality.
@@ -103,36 +106,65 @@ Throughout this project, I extensively used **Spring annotations** to build a st
 
 🔑 API Endpoints Summary
 Authentication
+
+
 Method	Endpoint	Description
+
 POST	/login	Authenticate user and retrieve JWT token
+
 POST	/register	Register a new user
 
+
 Products
+
+
 Method	Endpoint	Description
+
 GET	/products	Retrieve all products with optional filters
+
 GET	/products/{id}	Get product by ID
+
 POST	/products	Add new product (Admin only)
+
 PUT	/products/{id}	Update existing product (Admin only)
+
 DELETE	/products/{id}	Delete product (Admin only)
 
+
 Categories
+
 Method	Endpoint	Description
+
 GET	/categories	Get all categories
+
 GET	/categories/{id}	Get category by ID
+
 GET	/categories/{id}/products	Get products by category
+
 POST	/categories	Add new category (Admin only)
+
 PUT	/categories/{id}	Update category (Admin only)
+
 DELETE	/categories/{id}	Delete category (Admin only)
 
 Shopping Cart
+
 Method	Endpoint	Description
+
 GET	/cart	Retrieve current user's cart
+
 POST	/cart/products/{productId}	Add product to cart
+
 PUT	/cart/products/{productId}	Update product quantity in cart
+
 DELETE	/cart/products/{productId}	Remove product from cart
+
 DELETE	/cart	Clear entire cart
 
+
 Orders
+
 Method	Endpoint	Description
+
 POST	/orders	Checkout cart and create order
 
