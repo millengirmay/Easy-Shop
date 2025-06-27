@@ -188,7 +188,7 @@ public class ProductsController {
     public List<Product> search(@RequestParam(name="cat", required = false) Integer categoryId) {
         return productDao.search(categoryId);
     }
-}
+
 
 
 *****✅ Why it’s interesting:*****
