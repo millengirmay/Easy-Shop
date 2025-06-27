@@ -22,7 +22,6 @@ This project was developed as part of the **Year Up Advanced Java Capstone**, as
 
 ## 🔧 Technologies Used
 
-- **Java 17**
 - **Spring Boot**
 - **Spring Security with JWT**
 - **MySQL**
@@ -33,6 +32,38 @@ This project was developed as part of the **Year Up Advanced Java Capstone**, as
 ---
 
 ## 🚀 Key Features Developed
+
+
+##### 📝 Annotations Used and Their Purpose
+
+Throughout this project, I extensively used **Spring annotations** to build a structured, secure, and RESTful API. Below are the key annotations added, with explanations:
+
+| Annotation | Usage |
+| ---------- | ----- |
+| `@RestController` | Declares the class as a REST controller, combining `@Controller` and `@ResponseBody` to return JSON responses directly. Used in all controller classes (e.g., `ProductsController`, `OrdersController`, `ShoppingCartController`). |
+| `@RequestMapping` | Sets the base URL path for the controller. For example, `/products` for product endpoints. |
+| `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping` | Maps specific HTTP methods to controller methods for RESTful actions. For example, `@GetMapping("/products")` retrieves all products. |
+| `@CrossOrigin` | Enables Cross-Origin Resource Sharing (CORS) to allow frontend apps (running on different ports) to access the API. |
+| `@Autowired` | Injects dependencies automatically. Used for DAO and service injection in controllers. |
+| `@PreAuthorize` | Ensures authorization rules, like allowing only logged-in users or admins to access certain endpoints. For example, `@PreAuthorize("hasRole('ROLE_ADMIN')")` protects admin routes. |
+| `@PathVariable` | Binds URL path variables to method parameters, e.g., retrieving a product by its ID. |
+| `@RequestBody` | Maps the incoming JSON body to a Java object, used in POST and PUT endpoints. |
+| `@Valid` | Triggers validation on request body data to ensure input integrity. |
+| `@Value` | Injects values from `application.properties` into beans (used in `DatabaseConfig`). |
+| `@Bean` | Declares a Spring bean for dependency injection, as in configuring `BasicDataSource` for database connections. |
+
+---
+
+### 💡 **Why I Used These Annotations**
+
+- ✅ To build clean, modular, and readable REST APIs  
+- ✅ To enforce **security and role-based access control**  
+- ✅ To improve maintainability by using dependency injection  
+- ✅ To handle HTTP requests effectively and return appropriate responses
+
+---
+
+
 
 ### 🐛 Bug Fixes
 
