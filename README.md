@@ -172,10 +172,15 @@ POST	/orders	Checkout cart and create order
 
 *****✨ Interesting Code Snippets*****
 
-@RestController
-@RequestMapping("/products")
-@CrossOrigin
-public class ProductsController {
+
+    @RestController
+    
+     @RequestMapping("/products")
+     
+    @CrossOrigin
+    
+    public class ProductsController {
+    
     private ProductDao productDao;
 
     @Autowired
