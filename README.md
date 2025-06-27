@@ -29,7 +29,6 @@ This project was developed assuming the role of a **Backend Developer** for an e
 ## 🔧 Technologies Used
 
 - **Spring Boot**
-- **Spring Security with JWT**
 - **MySQL**
 - **Maven**
 - **Postman** for API testing
