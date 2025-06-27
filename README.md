@@ -1,6 +1,8 @@
 # 🛒 EasyShop E-Commerce API – Capstone Project
 
-![Uploading 17684833-b540-4e8c-9efa-40cc31fc85a4.png…]()
+
+![image](https://github.com/user-attachments/assets/b2250843-dcc8-4849-9af9-cd4715a77be8)
+
 
 
 ## 📚 Project Overview
