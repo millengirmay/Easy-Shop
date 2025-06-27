@@ -170,3 +170,37 @@ Method	Endpoint	Description
 
 POST	/orders	Checkout cart and create order
 
+*****✨ Interesting Code Snippets*****
+
+@RestController
+@RequestMapping("/products")
+@CrossOrigin
+public class ProductsController {
+    private ProductDao productDao;
+
+    @Autowired
+    public ProductsController(ProductDao productDao) {
+        this.productDao = productDao;
+    }
+
+    @GetMapping("")
+    @PreAuthorize("permitAll()")
+    public List<Product> search(@RequestParam(name="cat", required = false) Integer categoryId) {
+        return productDao.search(categoryId);
+    }
+}
+
+
+*****✅ Why it’s interesting:*****
+
+
+Uses @RestController to define a REST API.
+
+@RequestMapping("/products") maps base URL.
+
+@CrossOrigin enables cross-origin requests from frontend apps.
+
+@PreAuthorize("permitAll()") allows public access to the GET endpoint.
+
+Clean DAO injection with @Autowired for decoupled design.
+
